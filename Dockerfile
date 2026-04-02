@@ -23,9 +23,6 @@ COPY . .
 # Install PHP dependencies
 RUN composer install --no-dev --optimize-autoloader
 
-# Generate Laravel key
-RUN php artisan key:generate
-
 # Expose port 9000 for FPM
 EXPOSE 9000
 
